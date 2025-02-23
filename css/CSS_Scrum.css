@@ -1,0 +1,767 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(171deg, #fff6ee 0%, #f7e4d2 37%, rgba(219,211,203,1) 100%);
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+#Gemiddeld {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#links img{
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    z-index: 10;
+}
+
+#links {
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#links div {
+    display: flex;
+    align-items: center;
+}
+
+#GitLink, #LKLink {
+    position: relative;
+    margin-left: 10px;
+}
+
+.home h3 {
+    display: flex;
+    margin-top: 100px;
+}
+
+#Home h3 {
+    position: absolute;
+    top: 500px;
+    left: 55%;
+    right: 15%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 160px;
+    height: 100%;
+    color: white;
+    padding: 30px;
+    text-align: left;
+    z-index: 1000;
+    background-color: #e1ccb7;
+    transition: background-color 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+.navbar a {
+    display: block;
+    margin: 20px 0px; 
+    font-size: 20px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    margin: 20px;
+    font-size: 25px;
+    transition: font-size 0.5s ease;
+    z-index: 10000;
+}
+
+a:active {
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    font-size: 25px;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+#AboutMe,
+#Projects,
+#Education,
+#Experience,
+#Home,
+#Contact {
+    height: 1080px;
+    padding: 50px;
+}
+
+h2 {
+    margin-top: 100px;
+    text-align: center;
+}
+
+h1 {
+    visibility: hidden;
+}
+
+#AMH1 {
+    margin-top: 100px;
+    text-align: center;
+    font-size: 100px;
+    transition: font-size 0.5s ease;
+}
+
+#AMH1:hover {
+    font-size: 110px;
+}
+
+.underline {
+    width: 0;
+    height: 4px;
+    background-color: black;
+    margin: 5px auto;
+    transition: width 0.7s ease-in-out;
+}
+
+.underline.active {
+    width: 50%;
+}
+
+.ease-in {
+    float: left;
+    margin-right: 700px;
+    margin-left: 475px;
+    margin-top: 50px;
+    font-size: 30px;
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+.ease-in.visible {
+    opacity: 1;
+}
+
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.about-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    padding: 0 20px;
+    left: 95px;
+}
+
+.about-container p {
+    flex: 1;
+    margin: 0 -200px;
+    margin-right: 10px;
+    max-width: 6000px;
+}
+
+.about-container img {
+    max-width: 200px;
+    margin-bottom: 125px;
+    border-radius: 10px;
+    position: absolute;
+    top: 5px;
+    right: -225px;
+    max-height: 300px;
+}
+
+.backgroundHome {
+    background-color: #e1ccb7;
+    padding: 20px;
+    border-radius: 50px;
+    margin-top: 20px;
+    position: absolute;
+    width: 100%; 
+    max-width: 800px;
+    height: 50vh;
+    min-height: 400px;
+    left: 56%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.backgroundProjects {
+    background-color: #e1ccb7;
+    padding: 20px;
+    border-radius: 50px;
+    margin-top: 20px;
+    position: absolute;
+    width: 100%; 
+    max-width: 1500px;
+    height: 600px;
+    left: 55%;
+    transform: translateX(-50%);
+}
+
+@media (max-width: 1600px) {
+    .backgroundProjects {
+        width: 90%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .backgroundHome {
+        width: 90%;
+    }
+}
+
+@media (max-width: 800px) {
+    .backgroundHome{
+        width: 50%;
+    }
+}
+
+@media (max-width: 700px) {
+    #links{
+        width: 50%;
+    }
+}
+
+.card-container {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 20px;
+    text-align: center;
+    position: relative;
+    
+}
+
+.expandableCard1,
+.expandableCard2,
+.expandableCard3,
+.expandableCard4 {
+    background-color: #b7a99b;
+    border: #b7a99b;
+    border-radius: 50px;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    cursor: default;
+    position: relative;
+    margin: 10px;
+}
+
+.expandableCard1 {
+    align-self: flex-start;
+    top: 102px;
+}
+
+.expandableCard2 {
+    align-self: center;
+    top: 70px;
+}
+
+.expandableCard3 {
+    align-self: flex-start;
+    top: 60px;
+}
+
+.expandableCard4 {
+    background-color: #b7a99b;
+    border: #b7a99b;
+    border-radius: 50px;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    cursor: default;
+    position: absolute;
+    margin: 10px;
+    right: 970px;
+    top: 20px; 
+    transition: right 0.5s ease;
+}
+
+.expandableCard5 {
+    background-color: #b7a99b;
+    border: #b7a99b;
+    border-radius: 50px;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    cursor: default;
+    position: absolute;
+    margin: 10px;
+    right: 310px;
+    top: -180px; 
+    transition: right 0.5s ease;
+}
+
+@media (max-width: 1200px) {
+    .expandableCard4,
+    .expandableCard5 {
+        right: 10px;
+    }
+}
+
+@media (max-width: 800px) {
+    .expandableCard4,
+    .expandableCard5 {
+        right: 5px;
+    }
+}
+
+@media (max-width: 600px) {
+    .expandableCard4,
+    .expandableCard5 {
+        right: 0;
+    }
+}
+
+.expandableCard4 .card-content {
+    display: block;
+    position: absolute;
+}
+
+.expandableCard5 .card-content {
+    display: block;
+    position: absolute;
+}
+
+.expandableCard5 .card-content-education p {
+    text-align: left;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+.expandableCard1 .card-content,
+.expandableCard2 .card-content,
+.expandableCard3 .card-content {
+    display: block;
+}
+
+.expandableCard1 .card-image1,
+.expandableCard2 .card-image3,
+.expandableCard3 .card-image1,
+.expandableCard4 .card-image1 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 45px;
+    top: 50px;
+    border-radius: 15px;
+}
+
+.expandableCard1 .card-image2,
+.expandableCard2 .card-image4,
+.expandableCard3 .card-image2,
+.expandableCard4 .card-image2 {
+    width: 150px;
+    height: 180px;
+    position: absolute;
+    left: 20px;
+    top: 155px;
+    border-radius: 15px;
+}
+
+.expandableCard1 h3,
+.expandableCard2 h3,
+.expandableCard3 h3,
+.expandableCard4 h3 {
+    position: absolute;
+    top: 10px;
+}
+
+.expandableCard1 h3 {
+    left: 90px;
+}
+
+.expandableCard2 h3 {
+    left: 140px;
+}
+
+.expandableCard3 h3 {
+    left: 110px;
+}
+
+.card-image5 {
+    width: 150px;
+    height: 180px;
+    position: absolute;
+    left: 20px;
+    top: 155px;
+    border-radius: 15px;
+}
+
+.card-image6 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 45px;
+    top: 50px;
+    border-radius: 15px;
+}
+
+.expandableCard1 p,
+.expandableCard2 p,
+.expandableCard3 p {
+    position: absolute;
+    top: 50px;
+    left: 180px;
+    right: 25px;
+}
+
+.expandableCard4 p {
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    margin-bottom: 10px;
+}
+
+.card-paragraph1,
+.card-paragraph2,
+.card-paragraph3{
+    position: absolute;
+    top: 35%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.card-paragraph4 {
+    position: absolute;
+    top: 35%;
+    left: 70px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.card-paragraph1 {
+    left: 20%;
+}
+
+.card-paragraph2 {
+    left: 37%;
+}
+
+.card-paragraph3 {
+    left: 45%;
+}
+
+#Scalda {
+    margin-top: 50px;
+    margin-left: 200px;
+    margin-right: 900px;
+}
+
+#ScaldaLogo {
+    margin-left: 200px;
+    margin-top: 40px;
+}
+
+#EducationContainers {
+    background-color: #b7a99b;
+    width: 100px;
+    height: 100px;
+}
+
+#prog,
+#fed,
+#dab,
+#sen,
+#Scrum,
+#lob {
+    font-size: 20px;
+}
+
+#Nederlands,
+#Engels,
+#Wiskunde,
+#Natuurkunde,
+#PIE,
+#LOB {
+    font-size: 20px;
+}
+
+
+#FaseO {
+    left: 90px;
+}
+
+#prog {
+    top: 50px;
+}
+
+#fed {
+    top: 100px;
+}
+
+#dab {
+    top: 150px;
+}
+
+#sen {
+    top: 200px;
+}
+
+#Scrum {
+    top: 250px;
+}
+
+#lob {
+    top: 300px;
+}
+
+#Nederlands {
+    top: 50px;
+}
+
+#Engels {
+    top: 100px;
+}
+
+#Wiskunde {
+    top: 150px;
+}
+
+#Natuurkunde {
+    top: 200px;
+}
+
+#PIE {
+    top: 250px;
+}
+
+#LOB {
+    top: 300px;
+}
+
+.projectsTip {
+    position: relative;
+    top: 100px;
+    left: 88%;
+    transform: translateX(-50%);
+    height: 50px;
+    z-index: 1;
+}
+
+.ExpTip {
+    position: relative;
+    top: 40px;
+    left: 87%;
+    transform: translateX(-50%);
+    height: 50px;
+    z-index: 1;
+}
+
+#Education {
+    position: relative;
+}
+
+#Education .vertical-line {
+    width: 4px;
+    height: 40%;
+    background-color: black;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: height 0.7s ease-in-out;
+}
+
+#Education .vertical-line.active {
+    height: 60%;
+}
+
+#PZLogo {
+    width: 200px;
+    height: 100px;
+
+}
+
+.PieterZeeman {
+    position: relative;
+    top: -230px;
+    left: 850px;
+}
+
+#PZ {
+    position: relative;
+    top: 25px;
+    margin-right: 1000px;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+#gallery-image1,
+#gallery-image2,
+#gallery-image3,
+#gallery-image4 {
+    cursor: pointer;
+    transition: none;
+}
+
+#gallery-image1 {
+    width: 500px;
+    height: 150px;
+}
+
+#gallery-image2 {
+    width: 200px;
+    height: 200px;
+}
+
+#gallery-image3 {
+    width: 500px;
+    height: 150px;
+}
+
+#gallery-image4 {
+    width: 500px;
+    height: 150px;
+}
+
+#gallery-image1.active{
+    position: relative;
+    top: 10%;
+    left: 95%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 230px;
+    z-index: 1000;
+}
+
+#gallery-image2.active {
+    position: relative;
+    top: 10%;
+    left: 64%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 200px;
+    z-index: 1000;
+}
+
+#gallery-image3.active {
+    position: relative;
+    top: 20%;
+    left: 90%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 200px;
+    z-index: 1000;
+}
+
+#gallery-image4.active {
+    position: relative;
+    top: 10%;
+    left: 98%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 200px;
+    z-index: 1000;
+}
+
+#gallery-image1.fade,
+#gallery-image2.fade,
+#gallery-image3.fade,
+#gallery-image4.fade {
+    opacity: 0;
+}
+
+.gallery-image.active {
+    position: fixed;
+    top: 0%;
+    left: 54%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 300px;
+    z-index: 1000;
+}
+
+.gallery-image.fade {
+    opacity: 0;
+}
+
+.image-text {
+    display: none;
+    position: relative;
+    top: -5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #b7a99b;
+    color: black;
+    padding: 20px;
+    border-radius: 10px; 
+    z-index: 1001;
+    max-width: 70%;
+    text-align: center;
+    font-size: 20px;
+}
+
+.image-text.visible {
+    display: block;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.contact-container form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.contact-container label {
+    margin-top: 10px;
+}
+
+.contact-container input,
+.contact-container textarea {
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-container button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #e1ccb7;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-container button:hover {
+    background-color: #d1b8a3;
+}
