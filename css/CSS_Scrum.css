@@ -11,7 +11,7 @@ body {
 }
 
 #Gemiddeld {
-    margin-top: 10px;
+    margin-top: 20px;
     margin-bottom: 10px;
 }
 
@@ -41,7 +41,8 @@ body {
 
 .home h3 {
     display: flex;
-    margin-top: 100px;
+    margin-top: 150px;
+    justify-content: center;
 }
 
 #Home h3 {
@@ -172,13 +173,20 @@ h1 {
     justify-content: flex-start;
     position: relative;
     padding: 0 20px;
-    left: 95px;
+    left: 90px;
+}
+
+#Starboy {
+    width: 300px;
+    height: 300px;
+    margin-top: 90px;
+    margin-left: 165px;
 }
 
 .about-container p {
     flex: 1;
     margin: 0 -200px;
-    margin-right: 10px;
+    margin-right: -90px;
     max-width: 6000px;
 }
 
@@ -188,7 +196,7 @@ h1 {
     border-radius: 10px;
     position: absolute;
     top: 5px;
-    right: -225px;
+    right: -300px;
     max-height: 300px;
 }
 
@@ -200,8 +208,8 @@ h1 {
     position: absolute;
     width: 100%; 
     max-width: 800px;
-    height: 50vh;
-    min-height: 400px;
+    height: 1vh;
+    min-height: 340px;
     left: 56%;
     transform: translateX(-50%);
     z-index: -1;
@@ -340,17 +348,19 @@ h1 {
 .expandableCard4 .card-content {
     display: block;
     position: absolute;
+    
 }
 
 .expandableCard5 .card-content {
     display: block;
     position: absolute;
+    
 }
 
 .expandableCard5 .card-content-education p {
     text-align: left;
     margin-left: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 26px;
 }
 
 .expandableCard1 .card-content,
@@ -360,13 +370,21 @@ h1 {
 }
 
 .expandableCard1 .card-image1,
-.expandableCard2 .card-image3,
 .expandableCard3 .card-image1,
 .expandableCard4 .card-image1 {
     width: 100px;
     height: 100px;
     position: absolute;
     left: 45px;
+    top: 50px;
+    border-radius: 15px;
+}
+
+.expandableCard2 .card-image3 {
+    width: 150px;
+    height: 100px;
+    position: absolute;
+    left: 20px;
     top: 50px;
     border-radius: 15px;
 }
@@ -437,6 +455,14 @@ h1 {
     margin-bottom: 10px;
 }
 
+.expandableCard1 .card-content p,
+.expandableCard2 .card-content p,
+.expandableCard3 .card-content p,
+.expandableCard4 .card-content p,
+.expandableCard5 .card-content p {
+    text-align: left;
+}
+
 .card-paragraph1,
 .card-paragraph2,
 .card-paragraph3{
@@ -503,6 +529,7 @@ h1 {
 
 
 #FaseO {
+    top: 20px;
     left: 90px;
 }
 
@@ -632,8 +659,8 @@ h1 {
 }
 
 #gallery-image2 {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
 }
 
 #gallery-image3 {
