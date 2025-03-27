@@ -15,7 +15,14 @@ body {
     margin-bottom: 10px;
 }
 
-#links img{
+#GitPic {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    z-index: 10;
+}
+
+#LKPic {
     width: 50px;
     height: 50px;
     margin: 10px;
@@ -651,6 +658,11 @@ h1 {
 #gallery-image4 {
     cursor: pointer;
     transition: none;
+}
+
+#cvPic {
+    width: 90px;
+    height: 90px;
 }
 
 #gallery-image1 {
